@@ -1,4 +1,3 @@
-[PUBLIC_REPO_README.md](https://github.com/user-attachments/files/29675920/PUBLIC_REPO_README.md)
 # TMM Simulator
 
 Private-source binary release page for TMM Simulator.
@@ -23,7 +22,17 @@ Open the [Releases](https://github.com/kirudin/TMM-simulator-public/releases) pa
 4. Double-click `Launch TMM Simulator.command`.
 5. Keep the launcher window open while using the app.
 
-If macOS blocks the launcher, right-click `Launch TMM Simulator.command`, choose `Open`, then confirm.
+If macOS blocks the launcher:
+
+- First try: right-click `Launch TMM Simulator.command`, choose `Open`, then confirm.
+- If it is still blocked: open `System Settings` -> `Privacy & Security`, find the message similar to `"Launch TMM Simulator.command" was blocked to protect your Mac`, then click `Open Anyway`.
+
+On Korean macOS this may appear as:
+
+```text
+시스템 설정 -> 개인정보 보호 및 보안
+"Mac을 보호하기 위해 'Launch TMM Simulator.command'을(를) 차단했습니다" -> 그래도 열기
+```
 
 ### Windows
 
@@ -55,17 +64,10 @@ No source-code installation is required for the binary release.
 
 ## User Manual
 
-See `USER_MANUAL.md` in the private development repository or request the latest user manual from the maintainer.
+See `USER_MANUAL.md`
 
 ## Notes
 
 - The released ZIP files are OS-specific.
 - macOS and Windows builds are generated separately.
 - User-saved materials and stack presets are stored in the user's local app-data folder.
-- This public repository is not intended for issue-level source review or source installation.
-
-## Maintainer
-
-Hwi Je Woo  
-ARON Lab  
-hjwoo.aron@gmail.com
