@@ -1,73 +1,103 @@
 # TMM Simulator
 
-Private-source binary release page for TMM Simulator.
+A desktop research tool for optical multilayers, anisotropic polaritons, and near-field response maps.
 
-This public repository is used only for distributing packaged executables.  
-It does not include the source code, numerical kernels, material-library implementation, or research-development history.
+[Download the latest release](https://github.com/kirudin/TMM-simulator-public/releases/latest) · [Read the user manual](USER_MANUAL.md) · [Report an issue](https://github.com/kirudin/TMM-simulator-public/issues)
+
+![TMM Simulator dispersion map](assets/tmm-simulator-dispersion.jpg)
+
+The example above uses Air / alpha-MoO3 (50 nm) / SiO2 (285 nm) / Si with a 4x4 Berreman calculation on a 256 x 256 grid from 500 to 1400 cm⁻¹ and 0.5 to 80 µm⁻¹.
+
+## Explore multilayer optics without scripting
+
+TMM Simulator packages common multilayer workflows into one local desktop interface.
+
+| Workspace | What it provides |
+| --- | --- |
+| Dispersion map | Energy-momentum reflection maps with selectable units, observables, and export channels |
+| Isofrequency contour | Single-energy and sweep-mode kx-ky reflection-response maps |
+| E-field profile | Layer-resolved driven field intensity at one momentum or across a momentum sweep |
+| Material library | Built-in and user-defined scalar, uniaxial, and full 3x3 dielectric tensors |
+| s-SNOM correction | Optional edge-fringe coordinate conversion with invalid regions kept masked |
+| Export | Publication-ready PNG output and metadata-preserving CSV/ZIP data export |
+
+## Watch the IFC evolve with energy
+
+![TMM Simulator IFC energy sweep](assets/tmm-simulator-ifc-sweep.gif)
+
+This animation contains 10 unique 80 x 80 IFC calculations from 500 to 1400 cm⁻¹. Each frame uses the same Air / alpha-MoO3 (50 nm) / SiO2 (285 nm) / Si stack, the 4x4 Berreman solver, a ±80 µm⁻¹ kx-ky range, and Auto contrast.
+
+## Interface tour
+
+| Layer-resolved E-field profile | Material tensor inspection |
+| --- | --- |
+| ![E-field profile](assets/tmm-simulator-efield.jpg) | ![Material library](assets/tmm-simulator-material-library.jpg) |
 
 ## Download
 
-Open the [Releases](https://github.com/kirudin/TMM-simulator-public/releases) page and download the ZIP file for your operating system.
+Open [Releases](https://github.com/kirudin/TMM-simulator-public/releases/latest) and download the ZIP for your computer.
 
 - macOS Apple Silicon: `TMM-Simulator-Darwin-arm64-v...zip`
 - Windows 64-bit: `TMM-Simulator-Windows-AMD64-v...zip`
 
-## How To Run
+The macOS and Windows packages are built separately. Their version numbers should match the Release tag.
+
+## Quick start
 
 ### macOS
 
-1. Download the macOS ZIP file.
-2. Unzip it.
-3. Open the extracted folder.
-4. Double-click `Launch TMM Simulator.command`.
-5. Keep the launcher window open while using the app.
+1. Download and unzip the macOS package.
+2. Open the extracted folder.
+3. Double-click `Launch TMM Simulator.command`.
+4. Keep the launcher window open while using the app.
 
-If macOS blocks the launcher:
-
-- First try: right-click `Launch TMM Simulator.command`, choose `Open`, then confirm.
-- If it is still blocked: open `System Settings` -> `Privacy & Security`, find the message similar to `"Launch TMM Simulator.command" was blocked to protect your Mac`, then click `Open Anyway`.
-
-On Korean macOS this may appear as:
-
-```text
-시스템 설정 -> 개인정보 보호 및 보안
-"Mac을 보호하기 위해 'Launch TMM Simulator.command'을(를) 차단했습니다" -> 그래도 열기
-```
+If macOS blocks the launcher, right-click it, choose **Open**, and confirm. If needed, allow it under **System Settings -> Privacy & Security**.
 
 ### Windows
 
-1. Download the Windows ZIP file.
-2. Unzip it.
-3. Open the extracted folder.
-4. Double-click the TMM Simulator executable.
+1. Download and unzip the Windows package.
+2. Open the extracted folder.
+3. Double-click the TMM Simulator executable.
 
-If Windows SmartScreen appears, choose `More info` and then `Run anyway`.
+If Windows SmartScreen appears, choose **More info** and then **Run anyway**.
 
-## What The App Does
+## Supported inputs and controls
 
-TMM Simulator is a local browser-based research tool for optical multilayer simulations.
+- isotropic, uniaxial, and full 3x3 dielectric tensors;
+- arbitrary finite layer stacks between semi-infinite top and substrate media;
+- eV, wavelength, wavenumber, absolute momentum, and normalized momentum units;
+- 2x2 isotropic and 4x4 Berreman calculation paths;
+- co- and cross-polarized reflection channels;
+- custom observables assembled from complex reflection coefficients;
+- user material import from CSV, TXT, TSV, DAT, and XLSX tables;
+- reusable layer-stack and calculation-grid presets;
+- ten optimized UI color themes.
 
-Main workspaces:
+## Scientific scope
 
-- Dispersion map
-- Isofrequency contour
-- E-field profile
-- Material library
+TMM Simulator calculates driven optical reflection and field responses for layered media. Bright features in a reflection map are candidate optical structures, not automatic proof of a polariton eigenmode.
 
-The app runs locally on your computer. It opens a browser interface, usually at a local address such as:
+For quantitative interpretation, retain the material source, full layer stack, tensor rotation, solver method, grid, units, warnings, and numerical-convergence checks. The IFC workspace is an in-plane kx-ky reflection diagnostic; it is not a bulk kx-kz dispersion surface. The E-field workspace reconstructs a driven scattering response rather than a normalized eigenmode.
 
-```text
-http://127.0.0.1:8502/
-```
+## Local data and update checks
 
-No source-code installation is required for the binary release.
+- Calculations run locally on your computer.
+- User materials and stack presets are stored in the user's local app-data folder and are not replaced by a normal application update.
+- The optional **Check for updates** action contacts this GitHub repository only when requested.
+- The app does not automatically install an update.
 
-## User Manual
+## Documentation and support
 
-See `USER_MANUAL.md`
+- Start with the [User Manual](USER_MANUAL.md) for workflow details and interpretation guidance.
+- Use [GitHub Issues](https://github.com/kirudin/TMM-simulator-public/issues) for reproducible problems and feature requests.
+- Include the application version, operating system, complete stack, grid, solver method, and exported metadata when reporting a numerical issue.
 
-## Notes
+## Distribution notice
 
-- The released ZIP files are OS-specific.
-- macOS and Windows builds are generated separately.
-- User-saved materials and stack presets are stored in the user's local app-data folder.
+This public repository distributes packaged executables and user documentation. It does not include the private source code, numerical kernels, material-library implementation, or research-development history.
+
+## Maintainer
+
+Hwi Je Woo<br>
+ARON Lab<br>
+hjwoo.aron@gmail.com
