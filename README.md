@@ -4,11 +4,11 @@ A desktop research tool for optical multilayers, anisotropic polaritons, and nea
 
 [Download the latest release](https://github.com/kirudin/TMM-simulator-public/releases/latest) · [Read the user manual](USER_MANUAL.md) · [Report an issue](https://github.com/kirudin/TMM-simulator-public/issues)
 
-[![TMM Simulator dispersion map — open the interface walkthrough](assets/tmm-simulator-dispersion.jpg)](assets/tmm-simulator-interface-walkthrough.mp4)
+[![TMM Simulator interface walkthrough](assets/tmm-simulator-interface-walkthrough.gif)](assets/tmm-simulator-interface-walkthrough.gif)
 
-The example above uses Air / alpha-MoO3 (50 nm) / SiO2 (285 nm) / Si with a 4x4 Berreman calculation on a 256 x 256 grid from 500 to 1400 cm⁻¹ and 0.5 to 80 µm⁻¹.
+The autoplay preview covers a high-resolution dispersion calculation, IFC analysis, E-field profiles, and the Material Library. It contains no narration or captions.
 
-**Video:** [Watch the one-minute interface walkthrough](assets/tmm-simulator-interface-walkthrough.mp4) (MP4, no narration or captions). It covers the dispersion workflow, a high-resolution recalculation, IFC analysis, E-field profiles, and the Material Library.
+The dispersion example uses Air / alpha-MoO3 (50 nm) / SiO2 (285 nm) / Si with a 4x4 Berreman calculation on a 256 x 256 grid from 500 to 1400 cm⁻¹ and 0.5 to 80 µm⁻¹.
 
 ## Explore multilayer optics without scripting
 
